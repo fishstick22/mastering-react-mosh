@@ -11,21 +11,25 @@ class Counter extends Component {
     fontWeight: 'bold'
   }
 
+  product = {
+    someProperty: 'that is not defined yet'
+  }
+
   // constructor() {
   //   super();
   //   console.log('Constructor', this);
   //   this.handleIncrement = this.handleIncrement.bind(this);
   // }
 
-  handleIncrement = (product) => {
+  handleIncrement = product => {
     console.log(product);
     this.setState({ count: this.state.count + 1 })
     console.log('Increment Clicked', this.state.count);
   }
 
-  doHandleIncrement = () => {
-    this.handleIncrement({ id: 1});
-  }
+  // doHandleIncrement = () => {
+  //   this.handleIncrement({ id: 1});
+  // }
 
   render() {
     return (
@@ -34,7 +38,7 @@ class Counter extends Component {
           {this.formatCount()}
         </span>
         <button 
-          onClick={this.doHandleIncrement}
+          onClick={() => this.handleIncrement(this.product)}
           className='btn btn-secondary btn-sm'>
             Increment
         </button>
