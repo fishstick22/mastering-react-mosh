@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "counter-app"
+		},
+		{
+			"path": "react-app"
+		},
+		{
+			"path": "vidly"
+		}
+	],
+	"settings": {}
+}
