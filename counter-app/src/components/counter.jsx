@@ -34,7 +34,6 @@ class Counter extends Component {
     console.log('props', this.props)
     return (
       <div>
-        {this.props.children}
         <span style={this.styles} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>
@@ -43,6 +42,7 @@ class Counter extends Component {
           className='btn btn-secondary btn-sm'>
             Increment
         </button>
+        <button onClick={this.props.onDelete} className="bnt btn-danger btn-sm m-2">Delete</button>
       </div>
     );
   }
