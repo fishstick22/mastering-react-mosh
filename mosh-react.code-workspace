@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "vidly"
+		},
+		{
+			"path": "router-app"
 		}
 	],
 	"settings": {}
