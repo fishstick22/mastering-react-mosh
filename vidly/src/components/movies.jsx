@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import MoviesTable from "./moviesTable";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
@@ -20,7 +21,7 @@ class Movies extends Component {
     const genres = [{ _id: "", name: "All Genres" }, ...getGenres()];
 
     this.setState({ movies: getMovies(), genres });
-  };
+  }
 
   handleDelete = movie => {
     console.log(movie);
@@ -43,7 +44,7 @@ class Movies extends Component {
   handleGenreSelect = genre => {
     this.setState({ selectedGenre: genre, currentPage: 1 });
   };
-  
+
   handleSort = sortColumn => {
     this.setState({ sortColumn });
   };
@@ -87,6 +88,13 @@ class Movies extends Component {
           />
         </div>
         <div className="col">
+          <Link
+            to="/movies/new"
+            className="btn btn-primary"
+            style={{ marginBottom: 20 }}
+          >
+            New Movie
+          </Link>
           <p>Showing {totalCount} movies in the database.</p>
           <MoviesTable
             movies={movies}
