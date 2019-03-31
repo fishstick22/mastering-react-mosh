@@ -11,6 +11,12 @@
 		},
 		{
 			"path": "router-app"
+		},
+		{
+			"path": "http-app"
+		},
+		{
+			"path": "vidly-api-node"
 		}
 	],
 	"settings": {}
